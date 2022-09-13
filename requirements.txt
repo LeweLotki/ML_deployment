@@ -1,4 +1,4 @@
-pip install django
-pip install numpy
-pip install tensorflow
-pip install nltk
+django
+numpy
+tensorflow
+nltk
