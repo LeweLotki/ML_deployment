@@ -1,6 +1,6 @@
 import numpy as np
 from django.shortcuts import render
-from keras.models import load_model
+# from keras.models import load_model
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
@@ -8,7 +8,7 @@ import re
 from nltk.stem import PorterStemmer
 import pickle
 
-model = load_model('./savedModels/my_model')
+# model = load_model('./savedModels/my_model')
 
 number_of_words = 3440
 standard_len = 155
