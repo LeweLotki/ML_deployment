@@ -14,3 +14,8 @@ Example of prediction:
 <br /><br />
 
 Deployment has been done using Heroku servers. 
+
+Page layout:
+
+![ss](https://user-images.githubusercontent.com/68538575/190175032-81e5eaa4-2a07-4341-a870-4077ede87017.png)
+
