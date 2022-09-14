@@ -1,6 +1,6 @@
 import numpy as np
 from django.shortcuts import render
-# from keras.models import load_model
+from tensorflow.keras.models import load_model
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
@@ -8,7 +8,7 @@ import re
 from nltk.stem import PorterStemmer
 import pickle
 
-# model = load_model('./savedModels/my_model')
+model = pickle.load(open('model.sav', 'rb'))
 
 number_of_words = 3440
 standard_len = 155
@@ -61,7 +61,7 @@ def predictor(request):
     if request.method == 'POST':
         pred_sentence = request.POST['pred_sentence']
         y_pred = model_prediciton(model=model, sentence=pred_sentence)
-        if y_pred[0][0] > .5: y_pred = 'Sentence indicate depression with {}% probability'.format(np.round(100*y_pred[0][0], 2))
-        else:y_pred = 'Probability of depression is only {}%'.format(np.round(100*y_pred[0][0], 2))
+        if y_pred[0] > .5: y_pred = 'Sentence indicate depression with {}% probability'.format(np.round(100*y_pred[0], 2))
+        else:y_pred = 'Probability of depression is only {}%'.format(np.round(100*y_pred[0], 2))
         return render(request, 'main.html', {'result' : y_pred})
     return render(request, 'main.html')
