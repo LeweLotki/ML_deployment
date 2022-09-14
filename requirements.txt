@@ -1,6 +1,5 @@
-gunicore
-django
-numpy
-protobuf
-keras
-nltk
+gunicore==20.1.0
+django==4.1.1
+numpy==1.23.0
+keras==2.8.0
+nltk==3.7
