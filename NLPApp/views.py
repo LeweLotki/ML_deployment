@@ -1,6 +1,5 @@
 import numpy as np
 from django.shortcuts import render
-from tensorflow.keras.models import load_model
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
