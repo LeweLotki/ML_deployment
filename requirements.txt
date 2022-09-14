@@ -1,3 +1,4 @@
+gunicore
 django
 numpy
 protobuf
