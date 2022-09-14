@@ -62,6 +62,7 @@ def predictor(request):
     if request.method == 'POST':
         pred_sentence = request.POST['pred_sentence']
         y_pred = model_prediciton(model=model, sentence=pred_sentence)
+        if y_pred > 1:y_pred=1
         if y_pred[0] > .5: y_pred = 'Sentence indicate depression with {}% probability'.format(np.round(100*y_pred[0], 2))
         else:y_pred = 'Probability of depression is only {}%'.format(np.round(100*y_pred[0], 2))
         return render(request, 'main.html', {'result' : y_pred})
