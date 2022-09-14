@@ -4,7 +4,6 @@ from nltk.tokenize import RegexpTokenizer
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import re
-from nltk.stem import PorterStemmer
 import pickle
 
 model = pickle.load(open('model.sav', 'rb'))
