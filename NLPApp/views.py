@@ -1,10 +1,13 @@
 import numpy as np
 from django.shortcuts import render
+import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import re
 import pickle
+
+nltk.download('stopwords')
 
 model = pickle.load(open('model.sav', 'rb'))
 
