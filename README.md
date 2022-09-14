@@ -2,7 +2,7 @@
 
 This repository was created to deploy machine learning project and created website can be find under: 
 
-**depresstest.herokuapp.com**
+**https://depresstest.herokuapp.com/**
 
 Repository was created to detect depression indicators from natural speech with tf.keras. To achive this goal dataset scrapped from reddit with 7731 instances has been used(https://www.kaggle.com/datasets/infamouscoder/depression-reddit-cleaned). 
 Web deployment has been built using django framework.
